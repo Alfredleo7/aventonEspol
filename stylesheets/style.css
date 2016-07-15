@@ -3,13 +3,35 @@ body{
   background-position: center;
 }
 
+.contenido{
+  margin: 0 auto;
+  width: 400px;
+}
+
 .login-form{
     padding-top: 10%;
 }
 
+.modal-content{
+  background-color: rgba(42, 53, 70, 1);
+}
 
 .input-usuario{
-  background-color: rgba(36, 36, 36, 0.22);
+  background-color: rgba(36, 36, 36, 0.52);
+}
+
+button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: white;
+    padding: 2% 4%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: 1px solid white;
 }
 
 input{
@@ -20,6 +42,13 @@ input{
   float: right;
 }
 
-label, a, .login-title, input[type="text"], input[type="password"]{
+label, a, .login-title, .input-usuario[type="text"], .input-usuario[type="password"], .modal-content{
   color: white;
+}
+
+@media only screen and (max-width: 500px) {
+  .contenido{
+    width: 100%;
+    padding: 3%;
+  }
 }
