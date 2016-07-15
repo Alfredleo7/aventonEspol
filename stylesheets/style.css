@@ -1,0 +1,25 @@
+body{
+  background: url("../imagenes/fondo.jpg") no-repeat;
+  background-position: center;
+}
+
+.login-form{
+    padding-top: 10%;
+    width:390px;
+}
+
+.input-usuario{
+  background-color: rgba(36, 36, 36, 0.22);
+}
+
+input{
+  margin-top: 10px;
+}
+
+.login-forgot, .btn-iniciarSesion{
+  float: right;
+}
+
+label, a, .login-title{
+  color: white;
+}
