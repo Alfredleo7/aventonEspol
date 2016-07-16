@@ -4,53 +4,85 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aventón Espol</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/styleIndex.css">
+    <script type="text/javascript" src="javascript/jsIndex.js"></script>
+
   </head>
+  
   <body>
     <div class="contenido login-form">
-  		<h2 class="login-title">- Ingreso al Sistema -</h2>
-      <form class="form-ingreso" action="index.html" method="post">
-        <input type="text" class="form-control input-usuario" id="exampleInputEmail1" placeholder="Usuario">
-        <input type="password" class="form-control input-usuario" id="exampleInputEmail1" placeholder="Contraseña">
-        <div class="checkbox login-options">
+  		<h2 class="login-title text-center" style="text-align: center;">Ingreso al Sistema</h2>
+      <!-- el action se agrega con jquery -->
+      <form class="form-ingreso" novalidate>
+        <input type="text" class="form-control input-usuario" id="exampleInputUser" placeholder="Ingrese su usuario">
+        <input type="password" class="form-control input-usuario" id="exampleInputPassword" placeholder="Ingrese su contraseña">
+
+        <div class="checkbox login-options text-center">
 					<label><input type="checkbox"/> Recordarme</label>
-					<a href="#" class="login-forgot">Olvidó su contraseña?</a>
+          </br>
+          </br>
+          <!-- <a href="inicio.html" class="text-center"> -->
+            <button class="btn-iniciarSesion" onclick="validarLogin()">Iniciar Sesión</button>
+          <!-- </a> -->
+          
+          </br>
+          <a href="#">¿Olvidó su contraseña?</a>
 				</div>
+
         <div class="botones-inicio">
-          <!-- Button trigger modal -->
-          <button type="button" data-toggle="modal" data-target="#myModal">
-            Registrarme
-          </button>
-          <!-- Modal -->
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="registro text-center">
+            <h3 class="login-title text-center">¿No tienes una cuenta a&uacute;n?</h3>
+            <button type="button" data-toggle="modal" data-target="#myModal">
+              ¡Registrarme!
+            </button>
+          </div>
+
+          <!-- myModal -->
+          <!-- Esto evita que el modal se cierre dando click fuera del mismo -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+          <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> -->
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <!-- Quita el boton "X" para cerrar Modal -->
+                  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
                   <h4 class="modal-title" id="myModalLabel">Registrar Usuario</h4>
                 </div>
                 <div class="modal-body">
-                  <input type="text" class="form-control" placeholder="Usuario">
-                  <input type="password" class="form-control" placeholder="Contraseña">
-                  <input type="password" class="form-control" placeholder="Confirmar Contraseña">
+                  <input type="email" class="form-control" placeholder="Usuario de Espol" required="true">
+                  <input type="password" class="form-control" placeholder="Contraseña" required="true">
+                  <input type="password" class="form-control" placeholder="Confirmar Contraseña" required="true">
                 </div>
                 <div class="modal-footer">
                   <button type="button" data-dismiss="modal">Cerrar</button>
                   <button type="button">Registrarme</button>
                 </div>
+                <p class="nota-pie-modal">
+                  Al registrarte, aceptas las <em>Condiciones de Servicio</em> y la <em>Política de Privacidad</em>, incluyendo el <em>Uso de Cookies</em>. 
+                </p>
               </div>
             </div>
-          </div>
-          <a href="inicio.html">
-            <button type="button" class="btn-iniciarSesion" onclick="inicio.html">Iniciar Sesión</button>
-          </a>
-        </div>
+          </div> <!-- FIN myModal-->
+
+        </div>  <!-- FIN botones-inicio-->
       </form>
+    
+    <footer class="pie">
+      &copy; Todos los derechos reservados. 
+      </br>
+      2016 ESPOL
+    </footer>
+
   	</div>
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

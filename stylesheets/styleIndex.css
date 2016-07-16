@@ -6,7 +6,13 @@ body{
 .contenido{
   margin: 0 auto;
   width: 400px;
-  padding: 10% 0px 10% 0px;
+  /*padding: 10% 0px 10% 0px;*/
+  padding-top: 7%;
+  padding-bottom: auto;
+}
+
+.contenido h2{
+  align-self: center;
 }
 
 .modal-content{
@@ -19,6 +25,7 @@ body{
 
 button{
     background-color: rgba(255, 255, 255, 0);
+    border-radius: 5px;
     border: none;
     color: white;
     padding: 2% 4%;
@@ -29,23 +36,64 @@ button{
     margin: 4px 2px;
     cursor: pointer;
     border: 1px solid white;
+    font-weight: bolder;
+}
+
+button:hover{
+    color: #000000;
+    background-color: #FFFFFF;
+    transition: all .5s;
 }
 
 .input-usuario[type="text"], .input-usuario[type="password"]{
   margin-top: 10px;
 }
 
-.login-forgot, .btn-iniciarSesion{
-  float: right;
+.registro{
+  margin-top: 8%;
+  background-color:rgba(0,0,0,0.55);
+  border-radius: 8px;
+  padding: 5%;
+  padding-bottom: 8%;
+  z-index: -1;
+}
+
+.registro h3, .registro button {
+  z-index: 1!important;
 }
 
 label, a, .login-title, .input-usuario[type="text"], .input-usuario[type="password"], .modal-content{
   color: white;
 }
 
+.pie {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 8%;
+  text-shadow: 1px 1px #000;
+  color: #FFF
+}
+
+.nota-pie-modal {
+  text-align: justify;
+  padding: 5%;
+  
+}
+
 @media only screen and (max-width: 500px) {
   .contenido{
     width: 100%;
     padding: 3%;
+    padding-top: 8%;
   }
+
+  .pie {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20%;
+    margin-bottom: 2%;
+    text-shadow: 1px 1px #000;
+    color: #FFF
+  }
+
 }
