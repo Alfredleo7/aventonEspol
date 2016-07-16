@@ -1,0 +1,13 @@
+body{
+  background: url("../imagenes/fondo.jpg") no-repeat;
+  background-position: center;
+  padding-top: 70px;
+}
+
+nav{
+  background-color: rgba(36, 36, 36, 0.52);
+}
+
+ul a, li a, .navbar-brand, .boton-colapsar{
+  color: white;
+}
