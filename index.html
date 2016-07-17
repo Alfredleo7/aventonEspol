@@ -13,10 +13,6 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-    <!-- Form Validation -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/additional-methods.min.js"></script>
-
 
     <link rel="stylesheet" href="stylesheets/styleIndex.css">
     <script type="text/javascript" src="javascript/jsIndex.js"></script>
@@ -25,6 +21,7 @@
   
   <body>
     <div class="contenido login-form">
+      <img src="imagenes/logoEspol.png" alt="salud primero" width="70" height="70">
   		<h2 class="login-title text-center" style="text-align: center;">Ingreso al Sistema</h2>
       <!-- el action se agrega con jquery -->
       <form class="form-ingreso" novalidate>
@@ -39,15 +36,20 @@
           <a href="#">¿Olvidó su contraseña?</a>
 				</div>
 
+        <!-- Modal Registro -->
+        <div id="LoginInvalido"></div>
+
         <div class="botones-inicio">
           <div class="registro text-center">
             <h3 class="login-title text-center">¿No tienes una cuenta a&uacute;n?</h3>
-            <button type="button" data-toggle="modal" data-target="#myModal">
+            <button type="button" data-toggle="modal" data-target="#myModal" onclick="desabilitarLogin();">
               ¡Registrarme!
             </button>
           </div>
 
-          <!-- myModal -->
+          
+
+          <!-- Modal Registro -->
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -82,7 +84,7 @@
                 </div>
                 <div class="footer text-center">
                   <br><br>
-                  <button type="button" data-dismiss="modal">Cancelar</button>
+                  <button type="button" data-dismiss="modal" onclick="habilitarLogin();">Cancelar</button>
                   <button type="button" id="btnRegistrarme" data-dismiss="modal" onclick="validarRegistro()" data-toggle="modal" data-target="#myModal2">Registrarme</button>
                 </div>
                 <p class="nota-pie-modal">
@@ -92,11 +94,9 @@
             </div>
           </div> <!-- FIN myModal-->
           
-          <div id="modalExito">
-          </div>
+          <div id="modalExito"></div>
 
-          <div id="modalFail">
-          </div>
+          <div id="modalFail"></div>
 
         </div>  <!-- FIN botones-inicio-->
       </form>

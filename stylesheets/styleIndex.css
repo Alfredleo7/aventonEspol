@@ -6,8 +6,14 @@ body{
 .contenido{
   margin: 0 auto;
   width: 400px;
-  padding-top: 7%;
+  padding-top: 4%;
   padding-bottom: auto;
+}
+
+.contenido img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contenido h2{
@@ -80,16 +86,24 @@ label, a, .login-title, .input-usuario[type="text"], .input-usuario[type="passwo
 }
 
 @media only screen and (max-width: 500px) {
+  body{
+      background: url("../imagenes/Espol_0.jpg") no-repeat center right fixed;
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+  }
+
   .contenido{
     width: 100%;
     padding: 3%;
-    padding-top: 8%;
+    padding-top: 4%;
   }
 
   .pie {
     text-align: center;
     font-size: 1.2em;
-    margin-top: 20%;
+    margin-top: 8%;
     margin-bottom: 2%;
     text-shadow: 1px 1px #000;
     color: #FFF

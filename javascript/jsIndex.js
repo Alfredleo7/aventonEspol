@@ -1,12 +1,9 @@
 $( document ).ready(function(){
-	$("span.help-block").hide();
-	$("#texto").keyup(function(){
-		validateInput();
-		
-	});
+	
+	$("#texto").keyup(function(){ validateInput(); });
+	$("#texto").keydown(function(){ validateInput(); });
 	$("#pass2").keyup(function(){
 		repeatPassword();
-
 	});
 
 });
@@ -16,12 +13,35 @@ function validarLogin() {
 	var $usuarioValido = 'user';
 
 	if ($user==$usuarioValido){
+		$(".btn-iniciarSesion").removeAttr("type");
+		$(".btn-iniciarSesion").removeAttr("data-toggle");
+		$(".btn-iniciarSesion").removeAttr("data-target");
+		$("#myModalL0").remove();
+
 		$(".form-ingreso").attr("action","inicio.html");
-		$(".form-ingreso").attr("method","post");
-		console.log($user);
 	}
 	else{
-		alert("Usuario incorrecto papuh :v");
+		$("#myModalL0").remove();
+		/* Añadimos los atributos al boton */
+		$(".btn-iniciarSesion").attr("type","button");
+		$(".btn-iniciarSesion").attr("data-toggle","modal");
+		$(".btn-iniciarSesion").attr("data-target","myModalL0");
+		/* Creamos el modal */
+		var m1 = $("<div class='modal fade' id='myModalL0' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' data-keyboard='false' data-backdrop='static'></div>");
+		var m2 = $("<div class='modal-dialog' role='document'></div>");
+		var m3 = $("<div class='modal-content'></div>");
+		var m4 = $("<div class='modal-body text-center'><h4 style='font-size: 1.2em;'><i class='glyphicon glyphicon-remove'></i>  ¡Usuario inv&aacute;lido! <br><br> Por favor, intente de nuevo. </h4></div>");
+		var m5 = $("<div class='modal-footer' style='background-color: #ffffff;'></div>");
+		var m6 = $("<button type='button' class='btn btn-primary' data-dismiss='modal'>Cerrar</button></div>");
+		/* Ordenamos */
+		m6.appendTo(m5);
+		m4.appendTo(m3);
+		m5.appendTo(m3);
+		m3.appendTo(m2);
+		m2.appendTo(m1);
+		$("#LoginInvalido").append(m1);
+		$("#LoginInvalido .modal").modal("show");
+		/* Limpiamos los inputs */
 		$("#exampleInputUser").val("");
 		$("#exampleInputPassword").val("");
 	}
@@ -38,10 +58,10 @@ function validateInput(){
 		$("#texto").parent().append("<span id='iconotexto' class='glyphicon glyphicon-remove form-control-feedback'></span>");
 	  	return false;
 	}
-	else if( valor.match(/\d+/g) || valor.match(/ +/g) ) {   // Verifica si hay algun numero o espacio
+	else if( valor.match(/\d+/g) || valor.match(/ +/g) || !( valor.match(/^[\u0041-\u005A]*$/) || valor.match(/^[\u0061-\u007A]*$/) ) ){   // Verifica si hay numero, espacio y solamente a-z & A-Z
 		$("#iconotexto").remove();
 		$("#texto").parent().parent().attr("class","form-group has-error has-feedback");
-		$("#texto").parent().children("span").attr("style","color: #FFF;").text("No debe ingresar números o espacios").show();
+		$("#texto").parent().children("span").attr("style","color: #FFF;").text("¡Solamente letras!").show();
 		$("#texto").parent().append("<span id='iconotexto' class='glyphicon glyphicon-remove form-control-feedback'></span>");
 		return false;
 	}
@@ -74,6 +94,15 @@ function repeatPassword(){
 	}
 }
 
+function desabilitarLogin(){
+	$("span.help-block").hide();
+	$(".btn-iniciarSesion").attr("disabled","true");
+}
+
+function habilitarLogin(){
+	$(".btn-iniciarSesion").removeAttr("disabled");
+}
+
 function validarRegistro() {
 	$("#myModal2").remove();
 	var a = validateInput();
@@ -84,9 +113,9 @@ function validarRegistro() {
 		var m1 = $("<div class='modal fade' id='myModal2' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' data-keyboard='false' data-backdrop='static'></div>");
 		var m2 = $("<div class='modal-dialog' role='document'></div>");
 		var m3 = $("<div class='modal-content'></div>");
-		var m4 = $("<div class='modal-body'><h4><i class='glyphicon glyphicon-ok'></i> ¡Registrado con &eacute;xito! </h4></div>");
-		var m5 = $("<div class='modal-footer'></div>");
-		var m6 = $("<button type='button' data-dismiss='modal'>Cerrar</button></div>");
+		var m4 = $("<div class='modal-body text-center'><h4 style='font-size: 1.2em;'><i class='glyphicon glyphicon-ok'></i> ¡Registrado con &eacute;xito! </h4></div>");
+		var m5 = $("<div class='modal-footer' style='background-color: #ffffff;'></div>");
+		var m6 = $("<button type='button' class='btn btn-primary' data-dismiss='modal'>Cerrar</button></div>");
 
 		m6.appendTo(m5);
 		m4.appendTo(m3);
@@ -107,9 +136,9 @@ function validarRegistro() {
 		var m1 = $("<div class='modal fade' id='myModal2' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' data-keyboard='false' data-backdrop='static'></div>");
 		var m2 = $("<div class='modal-dialog' role='document'></div>");
 		var m3 = $("<div class='modal-content'></div>");
-		var m4 = $("<div class='modal-body'><h4 style='font-size: 1.2em;'><i class='glyphicon glyphicon-remove'></i>  ¡Usuario inv&aacute;lido! <br><br> Por favor, intente de nuevo. </h4></div>");
-		var m5 = $("<div class='modal-footer'></div>");
-		var m6 = $("<button type='button' data-dismiss='modal'>Cerrar</button></div>");
+		var m4 = $("<div class='modal-body text-center'><h4 style='font-size: 1.2em;'><i class='glyphicon glyphicon-remove'></i>  ¡Usuario inv&aacute;lido! <br><br> Por favor, intente de nuevo. </h4></div>");
+		var m5 = $("<div class='modal-footer' style='background-color: #ffffff;'></div>");
+		var m6 = $("<button type='button' class='btn btn-primary' data-dismiss='modal'>Cerrar</button></div>");
 
 		m6.appendTo(m5);
 		m4.appendTo(m3);
@@ -125,5 +154,7 @@ function validarRegistro() {
 		$("#iconotexto").remove();
 		$("#iconotexto2").remove();
 	}
+	//  Ya sea que se ingrese con exito o no, despues se habilita el Login
+	habilitarLogin();
 }
 

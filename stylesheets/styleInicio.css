@@ -52,11 +52,11 @@ header label {
   position: absolute;
   top: 50px;
   left: 0;
-  width: 60%;
+  width: 25%; /*25*/
   height: 100vh;
   background: rgba(36, 36, 36, 0.52);
   transition: all 0.4s;
-  transform: translateX(167%);
+  transform: translateX(500%); /*500*/
 }
 
 .menu a {
@@ -73,6 +73,22 @@ header label {
 }
 
 #menu-bar:checked ~ .menu{
-  transform: translateX(67%);
+  transform: translateX(318%); /*318*/
 }
 /*----------------------------------------*/
+@media only screen and (max-width: 500px) {
+  .menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 60%;
+    height: 100vh;
+    background: rgba(36, 36, 36, 0.52);
+    transition: all 0.4s;
+    transform: translateX(167%);
+  }
+  
+  #menu-bar:checked ~ .menu{
+    transform: translateX(67%);
+  }
+}
