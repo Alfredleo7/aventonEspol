@@ -1,12 +1,11 @@
 body{
   background: url("../imagenes/fondo.jpg") no-repeat;
-  background-position: center;
+  background-position: center center;
 }
 
 .contenido{
   margin: 0 auto;
   width: 400px;
-  /*padding: 10% 0px 10% 0px;*/
   padding-top: 7%;
   padding-bottom: auto;
 }
