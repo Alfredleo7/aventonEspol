@@ -75,6 +75,7 @@ function repeatPassword(){
 }
 
 function validarRegistro() {
+	$("#myModal2").remove();
 	var a = validateInput();
 	var b = (document.getElementById("pass2").value) == (document.getElementById("pass1").value);
 
