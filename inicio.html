@@ -38,9 +38,57 @@
         </nav>
       </div>
     </header>
+    <section>
+      <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
+         Información inmediata
+       </button>
 
+       <div id="myModal"class="modal fade" tabindex="-1" role="dialog">
+         <div class="modal-dialog modal-lg" role="document">
+           <div class="modal-content">
+             <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+               <h4 class="modal-title">Detalles</h4>
+             </div>
+             <div class="modal-body row">
+               <div class="row col-xs-12 col-md-6">
+                 <label class="col-xs-6 text-right">Nombre:</label>
+                 <p class="col-xs-6">Juan</p>
+                 <label class="col-xs-6 text-right">Apellido:</label>
+                 <p class="col-xs-6">Perez</p>
+                 <label class="col-xs-6 text-right">Modelo:</label>
+                 <p class="col-xs-6">Mazda</p>
+                 <label class="col-xs-6 text-right">Placa:</label>
+                 <p class="col-xs-6">YAA-500</p>
+               </div>
+
+               <div class="mapa col-xs-12 col-md-6">
+                 <div style='overflow:hidden;height:425px;width:100%;'>
+                   <div id='gmap_canvas' style='height:100%;width:100%;'></div>
+                   <div>
+                     <small><a href="http://embedgooglemaps.com">embed google maps</a></small>
+                   </div>
+                   <div>
+                     <small><a href="https://termsofusegenerator.net">terms of use generator</a></small>
+                   </div>
+                   <style>#gmap_canvas img{max-width:100%;background:none!important}</style>
+                 </div>
+               </div>
+
+             </div>
+             <div class="modal-footer">
+           <button type="button" class="btn" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Close</button>
+         </div>
+       </div><!-- /.modal-content -->
+     </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    </section>
+
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+    <script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(-2.172654895243337,-79.9060654686508),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-2.172654895243337,-79.9060654686508)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>Ecuador<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   </body>
 </html>
