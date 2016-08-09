@@ -69,26 +69,38 @@
                                 <input id="lname" name="name" type="text" placeholder="Modelo" class="form-control" required>
                             </div>
                         </div>
+                        <div class="row">
 
-                        <div class="form-group">
-                            <div class="col-md-10 col-md-offset-1">
-                                Hora <input id="email" name="email" type="time" placeholder="Hora" class="form-control" >
-                            </div>
-                        </div>
-                        <div class="form-group ">
-                          <div class="col-md-10 col-md-offset-1">
-                            <input type="checkbox" class="custom-control-input " required>
+                        <div class="form-group col-md-7">
+                          <div class="col-md-10 col-md-offset-2">
+                            <input type="checkbox" class="custom-control-input " id="checkIngreso">
                             <span class="custom-control-indicator"></span>
                             <span class="custom-control-description">Ingreso</span>
                           </div>
                         </div>
-                        <div class="form-group ">
-                          <div class="col-md-10 col-md-offset-1">
-                            <input type="checkbox" class="custom-control-input" required >
-                            <span class="custom-control-indicator"></span>
-                            <span class="custom-control-description">Salida</span>
-                          </div>
+                        <div class="form-group col-md-5">
+                            <div class="col-md-10 col-md-offset-1">
+                                Hora <input id="horaIngreso" name="email" type="time" placeholder="Hora" class="form-control" >
+                            </div>
                         </div>
+
+                      </div>
+                      <div class="row">
+
+                      <div class="form-group col-md-7">
+                        <div class="col-md-10 col-md-offset-2">
+                          <input type="checkbox" class="custom-control-input " id="checkSalida">
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Salida</span>
+                        </div>
+                      </div>
+                      <div class="form-group col-md-5">
+                          <div class="col-md-10 col-md-offset-1">
+                              Hora <input id="horaSalida" name="email" type="time" placeholder="Hora" class="form-control" >
+                          </div>
+                      </div>
+
+                    </div>
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
                                 <input id="phone" name="phone" type="number" placeholder="Placa" class="form-control" required>
@@ -109,12 +121,12 @@
         <div class="col-md-6">
             <div>
                 <div class="panel panel-default">
-                    <div class="text-center header">Our Office</div>
+                    <div class="text-center header">Escoja la ruta</div>
                     <div class="panel-body text-center">
-                        <h4>Address</h4>
+
 
                           <div id="floating-panel">
-                          <b>Start: </b>
+                          <b>Desde: </b>
 
                           <select class="form-control" id="start">
                             <option value="Urdesa, Guayaquil, Gye">Urdesa</option>
@@ -123,7 +135,7 @@
                             <option value="ESPOL, Vía Perimetral, Guayaquil, Guayas, Ecuador">ESPOL</option>
                             <option value="Restaurante Buffet Granchef, Avenida Francisco de Orellana, Guayaquil, Guayas, Ecuador">Granchef</option>
                           </select>
-                          <b>End: </b>
+                          <b>Hasta: </b>
                           <select class="form-control" id="end">
                             <option value="Barrio Centenario, Guayaquil, Guayas, Ecuador">Barrio Centenario</option>
                             <option value="Supermaxi, Joaquín José Orrantia González, Guayaquil, Guayas, Ecuador">Supermaxi Norte</option>
