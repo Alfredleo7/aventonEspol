@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aventón Espol</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/styleIndex.css">
+    <link rel="stylesheet" href="stylesheets/styleInicio.css">
+    <link rel="stylesheet" href="stylesheets/styleFormChofer.css">
+    <script type="text/javascript" src="javascript/jsFormChofer.js"></script>
+
+  </head>
+
+  <body>
+    <div class="contenido">
+    <header>
+      <div class="contenedor">
+        <a class="navbar-brand" href="#">Aventón Espol</a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">&#9776;</label>
+        <nav class="navbar-collapse menu">
+          <ul class="nav">
+            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+          <form class="navbar-form " role="search">
+            <div class="form-group has-feedback">
+
+              <div class="col-sm-12" style="padding: 0px;">
+                <input type="text" class="form-control" placeholder="Buscar...">
+                <span id='iconotexto' class='glyphicon glyphicon-search form-control-feedback' style="color: #000000;"></span>
+              </div>
+
+            </div>
+          </form>
+          <ul class="nav">
+            <li><a href="#">Link</a></li>
+            <li><a href="index.html"><i class="glyphicon glyphicon-off" data-toggle="collapse" data-target=".navbar-collapse.in" ></i> Salir</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+  		<h2 class="login-title text-center" style="text-align: center;">Registro de ruta</h2>
+
+      <div class="row">
+        <div class="col-md-6">
+            <div class="well well-sm">
+                <form class="form-horizontal" method="post">
+                    <fieldset>
+                        <legend class="text-center header">Datos del carro</legend>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="fname" name="name" type="text" placeholder="Color" class="form-control" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="lname" name="name" type="text" placeholder="Modelo" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                Hora <input id="email" name="email" type="time" placeholder="Hora" class="form-control" >
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="col-md-10 col-md-offset-1">
+                            <input type="checkbox" class="custom-control-input " required>
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Ingreso</span>
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="col-md-10 col-md-offset-1">
+                            <input type="checkbox" class="custom-control-input" required >
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Salida</span>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="phone" name="phone" type="number" placeholder="Placa" class="form-control" required>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg" >Guardar</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div>
+                <div class="panel panel-default">
+                    <div class="text-center header">Our Office</div>
+                    <div class="panel-body text-center">
+                        <h4>Address</h4>
+
+                          <div id="floating-panel">
+                          <b>Start: </b>
+
+                          <select class="form-control" id="start">
+                            <option value="Urdesa, Guayaquil, Gye">Urdesa</option>
+                            <option value="29 y Portete, Guayaquil, Guayas, Ecuador">29 y Portete</option>
+                            <option value="Km 30. Vía Perimetral 5">Km 30. Vía Perimetral</option>
+                            <option value="ESPOL, Vía Perimetral, Guayaquil, Guayas, Ecuador">ESPOL</option>
+                            <option value="Restaurante Buffet Granchef, Avenida Francisco de Orellana, Guayaquil, Guayas, Ecuador">Granchef</option>
+                          </select>
+                          <b>End: </b>
+                          <select class="form-control" id="end">
+                            <option value="Barrio Centenario, Guayaquil, Guayas, Ecuador">Barrio Centenario</option>
+                            <option value="Supermaxi, Joaquín José Orrantia González, Guayaquil, Guayas, Ecuador">Supermaxi Norte</option>
+                            <option value="Terminal Terrestre de Guayaquil, Avenida de Las Américas, Guayaquil, Ecuador">Terminal Terrestre</option>
+                            <option value="Sauces 3, Guayaquil, Guayas, Ecuador">Sauces 3</option>
+                            <option value="Guasmo Central, Avenida Domingo Comin, Guayaquil, Ecuador">Guasmo Central</option>
+
+                          </select>
+                        </div>
+
+                        <hr />
+                        <div id="map" ></div>
+                        &nbsp;
+                        <div id="warnings-panel"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <footer class="pie">
+        &copy; Todos los derechos reservados.
+        </br>
+        2016 ESPOL
+      </footer>
+  </div>
+
+    <script>
+        function initMap() {
+          var markerArray = [];
+
+          // Instantiate a directions service.
+          var directionsService = new google.maps.DirectionsService;
+
+          // Create a map and center it on Manhattan.
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: {lat: 40.771, lng: -73.974}
+          });
+
+          // Create a renderer for directions and bind it to the map.
+          var directionsDisplay = new google.maps.DirectionsRenderer({map: map});
+
+          // Instantiate an info window to hold step text.
+          var stepDisplay = new google.maps.InfoWindow;
+
+          // Display the route between the initial start and end selections.
+          calculateAndDisplayRoute(
+              directionsDisplay, directionsService, markerArray, stepDisplay, map);
+          // Listen to change events from the start and end lists.
+          var onChangeHandler = function() {
+            calculateAndDisplayRoute(
+                directionsDisplay, directionsService, markerArray, stepDisplay, map);
+          };
+          document.getElementById('start').addEventListener('change', onChangeHandler);
+          document.getElementById('end').addEventListener('change', onChangeHandler);
+        }
+
+        function calculateAndDisplayRoute(directionsDisplay, directionsService,
+            markerArray, stepDisplay, map) {
+          // First, remove any existing markers from the map.
+          for (var i = 0; i < markerArray.length; i++) {
+            markerArray[i].setMap(null);
+          }
+
+          // Retrieve the start and end locations and create a DirectionsRequest using
+          // WALKING directions.
+          directionsService.route({
+            origin: document.getElementById('start').value,
+            destination: document.getElementById('end').value,
+            travelMode: google.maps.TravelMode.WALKING
+          }, function(response, status) {
+            // Route the directions and pass the response to a function to create
+            // markers for each step.
+            if (status === google.maps.DirectionsStatus.OK) {
+              document.getElementById('warnings-panel').innerHTML =
+                  '<b>' + response.routes[0].warnings + '</b>';
+              directionsDisplay.setDirections(response);
+              showSteps(response, markerArray, stepDisplay, map);
+            } else {
+              window.alert('Directions request failed due to ' + status);
+            }
+          });
+        }
+
+        function showSteps(directionResult, markerArray, stepDisplay, map) {
+          // For each step, place a marker, and add the text to the marker's infowindow.
+          // Also attach the marker to an array so we can keep track of it and remove it
+          // when calculating new routes.
+          var myRoute = directionResult.routes[0].legs[0];
+          for (var i = 0; i < myRoute.steps.length; i++) {
+            var marker = markerArray[i] = markerArray[i] || new google.maps.Marker;
+            marker.setMap(map);
+            marker.setPosition(myRoute.steps[i].start_location);
+            attachInstructionText(
+                stepDisplay, marker, myRoute.steps[i].instructions, map);
+          }
+        }
+
+
+
+    </script>
+    <style>
+    #map {
+        min-width: 300px;
+        min-height: 300px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header {
+        background-color: #F5F5F5;
+        color: #36A0FF;
+
+        font-size: 27px;
+        padding: 10px;
+    }
+</style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcoBX8FRfrJVOw-nk7KjU3MC7maC3AJYE&signed_in=true&callback=initMap"
+        async defer></script>
+
+    <script src="jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/additional-methods.min.js"></script>
+
+  </body>
+</html>

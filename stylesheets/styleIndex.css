@@ -82,7 +82,7 @@ label, a, .login-title, .input-usuario[type="text"], .input-usuario[type="passwo
 .nota-pie-modal {
   text-align: justify;
   padding: 5%;
-  
+
 }
 
 @media only screen and (max-width: 500px) {

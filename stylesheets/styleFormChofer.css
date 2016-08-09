@@ -1,0 +1,13 @@
+.contenido{
+  width: 90%;
+padding: 0%;
+
+}
+@media only screen and (max-width: 500px) {
+  body{
+      background: url("../imagenes/Espol_0.jpg") no-repeat center right fixed;
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+  }
