@@ -1,9 +1,9 @@
 
-* {
+/* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+}*/
 
 body{
   background: url("../imagenes/fondo.jpg") no-repeat;
@@ -13,6 +13,8 @@ body{
 
 .panelRuta{
   background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-size: 150%;
 }
 
 /*.modal-content{
@@ -98,6 +100,15 @@ header label {
   background: rgba(255,255,255,0.3);
 }
 
+.pie {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 8%;
+  text-shadow: 1px 1px #000;
+  color: #FFF
+}
+
+
 #menu-bar:checked ~ .menu{
   transform: translateX(318%); /*318*/
 }
@@ -116,5 +127,13 @@ header label {
 
   #menu-bar:checked ~ .menu{
     transform: translateX(67%);
+  }
+
+  body{
+      background: url("../imagenes/Espol_0.jpg") no-repeat center right fixed;
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
   }
 }

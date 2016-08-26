@@ -2,13 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bienvenido</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheets/styleInicio.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/styleInicio.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
     <header>
@@ -18,7 +19,7 @@
         <label for="menu-bar">&#9776;</label>
         <nav class="navbar-collapse menu">
           <ul class="nav">
-            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="formChofer.html">Registrar Ruta<span class="sr-only">(current)</span></a></li>
             <li><a href="#">Link</a></li>
           </ul>
           <form class="navbar-form " role="search">
@@ -38,10 +39,19 @@
         </nav>
       </div>
     </header>
-    <section class="row container">
+    <div class="container">
+      <div class="row">
+        <section>
 
+        </section>
+      </div>
+    </div>
+    <footer class="pie">
+      &copy; Todos los derechos reservados.
+      </br>
+      2016 ESPOL
+    </footer>
 
-    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script>
@@ -62,7 +72,7 @@
                 '<div class="col-md-3 col-sm-6 col-xs-12" onclick="mostrar('+i+');">'+
                   '<div class="panel panelRuta panel-default">'+
                     '<div class="panel-body">'+
-                      rutas[i].nombre+
+                      rutas[i].nombre+ '<br>' + rutas[i].marca +
                     '</div>'+
                   '</div>'+
                 '</div>'+
@@ -89,22 +99,27 @@
                          '<p class="col-xs-6">'+rutas[i].placa+'</p>'+
                          '<label class="col-xs-6 text-right">Color:</label>'+
                          '<p class="col-xs-6">'+rutas[i].color+'</p>'+
+                         '<hr>'+
+                         '<label class="col-xs-6 text-right">Asientos disponibles:</label>'+
+                         '<p class="col-xs-6">'+rutas[i].asientosDisponibles+'</p>'+
                        '</div>'+
 
                        '<div class="mapa col-xs-12 col-md-6">'+
-                         '<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d63791.451076196405!2d-79.96111806086586!3d-2.166753595660136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x0%3A0xb2acb5015f1de139!2sParque+Centenario!3m2!1d-2.1900634!2d-79.8874321!4m5!1s0x902d72f925e5bfdb%3A0x327cdb9f7f4ba3b2!2sEscuela+Superior+Polit%C3%A9cnica+del+Litoral+(ESPOL)%2C+V%C3%ADa+Perimetral%2C+Guayaquil!3m2!1d-2.1481458!2d-79.9644885!5e0!3m2!1ses!2sec!4v1472160220588" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>'+
+                         '<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d63791.451076196405!2d-79.96111806086586!3d-2.166753595660136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x0%3A0xb2acb5015f1de139!2sParque+Centenario!3m2!1d-2.1900634!2d-79.8874321!4m5!1s0x902d72f925e5bfdb%3A0x327cdb9f7f4ba3b2!2sEscuela+Superior+Polit%C3%A9cnica+del+Litoral+(ESPOL)%2C+V%C3%ADa+Perimetral%2C+Guayaquil!3m2!1d-2.1481458!2d-79.9644885!5e0!3m2!1ses!2sec!4v1472160220588" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>'+
                        '</div>'+
                      '</div>'+
                      '<div class="modal-footer">'+
+                   '<button type="button" class="btn btn-primary" data-dismiss="modal"> Enviar Solicitud</button>'+
                    '<button type="button" class="btn" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Close</button>'+
                  '</div>'+
-               '</div><!-- /.modal-content -->'+
-             '</div><!-- /.modal-dialog -->'+
-            '</div><!-- /.modal -->'
+               '</div>'+
+             '</div>'+
+            '</div>'
             );
           });
       	});
       };
+
     </script>
   </body>
 </html>

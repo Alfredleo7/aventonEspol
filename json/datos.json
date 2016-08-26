@@ -5,56 +5,64 @@
     "marca" : "Mazda",
     "modelo" : "Mazda2",
     "placa" : "YGA-6584",
-    "color" : "gris"
+    "color" : "gris",
+    "asientosDisponibles" : "2"
   },
   {
     "nombre" : "Luis Antonio",
     "apellido" : "Carrasco Medina",
-    "marca" : "Mazda",
-    "modelo" : "Mazda2",
+    "marca" : "Toyota",
+    "modelo" : "Yaris",
     "placa" : "YGA-6584",
-    "color" : "gris"
+    "color" : "celeste",
+    "asientosDisponibles" : "1"
   },{
     "nombre" : "David William",
     "apellido" : "Jacome Rodriguez",
-    "marca" : "Mazda",
-    "modelo" : "Mazda2",
+    "marca" : "Tesla",
+    "modelo" : "Model S",
     "placa" : "YGA-6584",
-    "color" : "gris"
+    "color" : "morado",
+    "asientosDisponibles" : "4"
   },{
     "nombre" : "Luis Alfredo",
     "apellido" : "Mariño Gomez",
-    "marca" : "Mazda",
-    "modelo" : "Mazda2",
+    "marca" : "Peugeot",
+    "modelo" : "iOn",
     "placa" : "YGA-6584",
-    "color" : "gris"
+    "color" : "gris",
+    "asientosDisponibles" : "3"
   },{
     "nombre" : "Sofia Belen",
     "apellido" : "Rodriguez Alvarado",
-    "marca" : "Mazda",
-    "modelo" : "Mazda2",
+    "marca" : "Nissan",
+    "modelo" : "Evalia",
     "placa" : "YGA-6584",
-    "color" : "gris"
+    "color" : "negro",
+    "asientosDisponibles" : "1"
   },{
     "nombre" : "Jorge Carlos",
     "apellido" : "Hidalgo Revelo",
-    "marca" : "Mazda",
-    "modelo" : "Mazda2",
+    "marca" : "Mercedez-Benz",
+    "modelo" : "Clase C",
     "placa" : "YGA-6584",
-    "color" : "gris"
+    "color" : "gris",
+    "asientosDisponibles" : "2"
   },{
     "nombre" : "Isabela Tatiana",
     "apellido" : "Vinces Tapia",
-    "marca" : "Mazda",
-    "modelo" : "Mazda2",
+    "marca" : "Porsche",
+    "modelo" : "Cayenne",
     "placa" : "YGA-6584",
-    "color" : "gris"
+    "color" : "rojo",
+    "asientosDisponibles" : "3"
   },{
     "nombre" : "Jonathan Fernando",
     "apellido" : "Parrales Neira",
-    "marca" : "Mazda",
-    "modelo" : "Mazda2",
+    "marca" : "Renault",
+    "modelo" : "Trafic",
     "placa" : "YGA-6584",
-    "color" : "gris"
+    "color" : "azul",
+    "asientosDisponibles" : "1"
   }
 ]
