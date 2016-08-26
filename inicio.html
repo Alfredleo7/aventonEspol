@@ -38,57 +38,73 @@
         </nav>
       </div>
     </header>
-    <section>
-      <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
-         Información inmediata
-       </button>
-
-       <div id="myModal"class="modal fade" tabindex="-1" role="dialog">
-         <div class="modal-dialog modal-lg" role="document">
-           <div class="modal-content">
-             <div class="modal-header">
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-               <h4 class="modal-title">Detalles</h4>
-             </div>
-             <div class="modal-body row">
-               <div class="row col-xs-12 col-md-6">
-                 <label class="col-xs-6 text-right">Nombre:</label>
-                 <p class="col-xs-6">Juan</p>
-                 <label class="col-xs-6 text-right">Apellido:</label>
-                 <p class="col-xs-6">Perez</p>
-                 <label class="col-xs-6 text-right">Modelo:</label>
-                 <p class="col-xs-6">Mazda</p>
-                 <label class="col-xs-6 text-right">Placa:</label>
-                 <p class="col-xs-6">YAA-500</p>
-               </div>
-
-               <div class="mapa col-xs-12 col-md-6">
-                 <div style='overflow:hidden;height:425px;width:100%;'>
-                   <div id='gmap_canvas' style='height:100%;width:100%;'></div>
-                   <div>
-                     <small><a href="http://embedgooglemaps.com">embed google maps</a></small>
-                   </div>
-                   <div>
-                     <small><a href="https://termsofusegenerator.net">terms of use generator</a></small>
-                   </div>
-                   <style>#gmap_canvas img{max-width:100%;background:none!important}</style>
-                 </div>
-               </div>
-
-             </div>
-             <div class="modal-footer">
-           <button type="button" class="btn" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Close</button>
-         </div>
-       </div><!-- /.modal-content -->
-     </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+    <section class="row container">
 
 
     </section>
-
-    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-    <script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(-2.172654895243337,-79.9060654686508),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-2.172654895243337,-79.9060654686508)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>Ecuador<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        llenarSection();
+      });
+
+      var mostrar = function(i){
+        $("#myModal"+i).modal("show");
+      }
+
+      var llenarSection = function(){
+        var url = 'json/datos.json'
+        $.getJSON(url, function(rutas){
+          $.each(rutas, function(i){
+            $("section").append(
+
+                '<div class="col-md-3 col-sm-6 col-xs-12" onclick="mostrar('+i+');">'+
+                  '<div class="panel panelRuta panel-default">'+
+                    '<div class="panel-body">'+
+                      rutas[i].nombre+
+                    '</div>'+
+                  '</div>'+
+                '</div>'+
+
+
+               '<div id="myModal'+i+'"class="modal fade" tabindex="-1" role="dialog">'+
+                 '<div class="modal-dialog modal-lg" role="document">'+
+                   '<div class="modal-content">'+
+                     '<div class="modal-header">'+
+                       '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
+                       '<h4 class="modal-title">Detalles de la Ruta</h4>'+
+                     '</div>'+
+                     '<div class="modal-body row">'+
+                       '<div class="row col-xs-12 col-md-6">'+
+                         '<label class="col-xs-6 text-right">Nombre:</label>'+
+                         '<p class="col-xs-6">'+rutas[i].nombre+'</p>'+
+                         '<label class="col-xs-6 text-right">Apellido:</label>'+
+                         '<p class="col-xs-6">'+rutas[i].apellido+'</p>'+
+                         '<label class="col-xs-6 text-right">Marca:</label>'+
+                         '<p class="col-xs-6">'+rutas[i].marca+'</p>'+
+                         '<label class="col-xs-6 text-right">Modelo:</label>'+
+                         '<p class="col-xs-6">'+rutas[i].modelo+'</p>'+
+                         '<label class="col-xs-6 text-right">Placa:</label>'+
+                         '<p class="col-xs-6">'+rutas[i].placa+'</p>'+
+                         '<label class="col-xs-6 text-right">Color:</label>'+
+                         '<p class="col-xs-6">'+rutas[i].color+'</p>'+
+                       '</div>'+
+
+                       '<div class="mapa col-xs-12 col-md-6">'+
+                         '<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d63791.451076196405!2d-79.96111806086586!3d-2.166753595660136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x0%3A0xb2acb5015f1de139!2sParque+Centenario!3m2!1d-2.1900634!2d-79.8874321!4m5!1s0x902d72f925e5bfdb%3A0x327cdb9f7f4ba3b2!2sEscuela+Superior+Polit%C3%A9cnica+del+Litoral+(ESPOL)%2C+V%C3%ADa+Perimetral%2C+Guayaquil!3m2!1d-2.1481458!2d-79.9644885!5e0!3m2!1ses!2sec!4v1472160220588" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>'+
+                       '</div>'+
+                     '</div>'+
+                     '<div class="modal-footer">'+
+                   '<button type="button" class="btn" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Close</button>'+
+                 '</div>'+
+               '</div><!-- /.modal-content -->'+
+             '</div><!-- /.modal-dialog -->'+
+            '</div><!-- /.modal -->'
+            );
+          });
+      	});
+      };
+    </script>
   </body>
 </html>

@@ -1,0 +1,60 @@
+[
+  {
+    "nombre" : "Juan",
+    "apellido" : "Perez",
+    "marca" : "Mazda",
+    "modelo" : "Mazda2",
+    "placa" : "YGA-6584",
+    "color" : "gris"
+  },
+  {
+    "nombre" : "Luis Antonio",
+    "apellido" : "Carrasco Medina",
+    "marca" : "Mazda",
+    "modelo" : "Mazda2",
+    "placa" : "YGA-6584",
+    "color" : "gris"
+  },{
+    "nombre" : "David William",
+    "apellido" : "Jacome Rodriguez",
+    "marca" : "Mazda",
+    "modelo" : "Mazda2",
+    "placa" : "YGA-6584",
+    "color" : "gris"
+  },{
+    "nombre" : "Luis Alfredo",
+    "apellido" : "Mariño Gomez",
+    "marca" : "Mazda",
+    "modelo" : "Mazda2",
+    "placa" : "YGA-6584",
+    "color" : "gris"
+  },{
+    "nombre" : "Sofia Belen",
+    "apellido" : "Rodriguez Alvarado",
+    "marca" : "Mazda",
+    "modelo" : "Mazda2",
+    "placa" : "YGA-6584",
+    "color" : "gris"
+  },{
+    "nombre" : "Jorge Carlos",
+    "apellido" : "Hidalgo Revelo",
+    "marca" : "Mazda",
+    "modelo" : "Mazda2",
+    "placa" : "YGA-6584",
+    "color" : "gris"
+  },{
+    "nombre" : "Isabela Tatiana",
+    "apellido" : "Vinces Tapia",
+    "marca" : "Mazda",
+    "modelo" : "Mazda2",
+    "placa" : "YGA-6584",
+    "color" : "gris"
+  },{
+    "nombre" : "Jonathan Fernando",
+    "apellido" : "Parrales Neira",
+    "marca" : "Mazda",
+    "modelo" : "Mazda2",
+    "placa" : "YGA-6584",
+    "color" : "gris"
+  }
+]
